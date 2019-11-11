@@ -28,8 +28,11 @@ setInterval(function() {
 
 // The more score you have the faster it goes.
 
-
-
+this.speedUp = function() {
+    if (score > 40) {
+    speed = 4;
+}
+}
 
 this.hits = function(bird) {
     if(bird.y < this.top || bird.y > height - this.bottom) {
@@ -51,7 +54,7 @@ this.hits = function(bird) {
 }
 
 this.show = function() {
-    fill(209,151,75);
+    fill(255,20,147);
     if (this.highlight) {
         fill(255,0,0);
     }
