@@ -1,3 +1,6 @@
+var music = new Audio();
+music.src = "assets/off_limits.wav"; 
+
 function bird() {
     this.y = height/2;
     this.x = 53;
@@ -7,6 +10,7 @@ function bird() {
     this.velocity = 0;
 
     this.show = function () {
+        music.play();
         image(duck,this.x,this.y)
     }
     this.up = function() {

@@ -26,13 +26,6 @@ setInterval(function() {
 
 
 
-// The more score you have the faster it goes.
-
-this.speedUp = function() {
-    if (score > 40) {
-    speed = 4;
-}
-}
 
 this.hits = function(bird) {
     if(bird.y < this.top || bird.y > height - this.bottom) {
@@ -52,14 +45,17 @@ this.hits = function(bird) {
     this.highlight = false;
    return false
 }
+//image(duck,this.x,this.y)
 
 this.show = function() {
-    fill(255,20,147);
+   fill(255,20,147);
     if (this.highlight) {
         fill(255,0,0);
     }
-    rect(this.x, 0 , this.w, this.top);
-    rect(this.x, height - this.bottom, this.w, this.bottom);
+    //rect(this.x, 0 , this.w, this.top);
+    //rect(this.x, height - this.bottom, this.w, this.bottom);
+    image(bamboo, this.x, 0 , this.w, this.top);
+    image(bamboo,this.x, height - this.bottom, this.w, this.bottom);
 }
 
 this.update = function() {

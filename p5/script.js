@@ -2,23 +2,19 @@ var bird;
 var pipes = [];
 var score= 0;
 var coins = [];
-
 var duck;
-var bamboo;
-//var retro;
+
+
 
 
 
 function preload() {
     duck = loadImage("assets/winnermoustache1.png");
-    bamboo = loadImage("assets/bamboo.png");
+    bamboo = loadImage("assets/razor.png");
     gamebg = loadImage("assets/gamebackground.png");
 }
 
-/* this.show = function () {
-    image(retro);
-    fill();
-} */
+
 
 function setup() {
     createCanvas(window.innerWidth,window.innerHeight);
@@ -34,7 +30,7 @@ function setup() {
 
 function draw() {
    background(gamebg);
-
+    
    for (let i = pipes.length-1; i >= 0; i--) {
     pipes[i].show();
     pipes[i].update();
